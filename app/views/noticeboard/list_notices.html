@@ -1,0 +1,40 @@
+  
+    <div class="row">
+      <h4>Notice Board</h4><hr/>
+    </div>
+
+    <div class="row">
+      <div class="alert alert-danger" role="alert" ng-if='notices_list == []'> Notice Board is empty</div>
+    </div>
+    <div class="row" > 
+      <div class="panel panel-default">
+        <div class="row">
+          <div class="pull-right">
+            
+          </div>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <tr><td></td><td></td><td></td><td><button class="btn btn-primary pull-right" ng-click="create_notification()"> ADD </button></td>
+            </tr>
+            <tr>
+              <th>#</th>
+              <th>Created by</th>
+              <th>Content</th>
+              <th>Created on</th>
+            </tr>
+            <tr ng-repeat='notice in notices_list'> 
+              <td>{{notice.id}}</td> 
+              <td>User</td>
+              <td>{{notice.content}}</td>  
+              <td>{{notice.created_at}}</td> 
+              <td></td>
+            </tr> 
+          </table>
+        </div>
+      </div>
+    </div>
+        
+  </div>
+
+  

@@ -1,0 +1,31 @@
+
+
+
+<div class="modal-header">
+<button type="button" class="close" ng-click="$dismiss()">&times;</button>
+<h3 class="modal-title">title</h3>
+</div>
+<div class="modal-body">
+  <div class="alert alert-success" ng-if="success_message">{{success_message}}</div>
+  <div class="alert alert-danger" ng-if="error_message">{{error_message}}</div>
+  <div class="form">
+    <div ng-if= "return_message" class="alert alert-danger">{{return_message}}</div>
+    <form name="form" ng-submit="post_notice()" role="form" novalidate>
+        <div class="form-group">
+          <label for="content">Add Content </label>
+          <i class="fa fa-key"></i>
+          <textarea cols="10" rows="10" name="content" id="content" class="form-control" ng-model="notification_data.content" required > </textarea>
+          <span ng-show="form.content.$dirty && form.content.$error.required" class="help-block">content is required</span>
+        </div>
+        <div class="form-actions">
+          <input type="submit" ng-disabled="form.$invalid" class="btn btn-danger" value="Post Notice">  
+        </div>
+    </form>
+  </div>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-default" type="button" ng-click="$dismiss()">Cancel</button>
+</div>
+
+

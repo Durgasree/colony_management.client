@@ -1,0 +1,62 @@
+<!-- <div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div> -->
+
+<div class="container jumbotron">
+  <div class="row">
+    <h3>  </h3>
+  </div>
+  <hr>
+  <div class="row ">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h5>Login</h5>
+      </div>
+      <div class="panel-body">
+        <div class="form">
+
+          <div ng-if= "return_message" class="alert alert-danger">{{return_message}}</div>
+          <form name="form" ng-submit="login()" role="form" novalidate>
+              <div class="form-group">
+                <label for="username">Email</label>
+                <i class="fa fa-key"></i>
+                <input type="email" name="email" id="email" class="form-control" ng-model="user_data.email" required />
+                <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">email is required</span>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password" id="password" class="form-control" ng-model="user_data.password" required />
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+              </div>
+              <div class="form-actions">
+                <input type="submit" ng-disabled="form.$invalid" class="btn btn-danger" name="Login">  
+                <span> <h3> <a ui-sref = "sign_up"> Not Registered? </a> </h3></span>
+              </div>
+          </form>
+        </div>
+      </div>
+      <div class="panel-footer"></div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div> -->
